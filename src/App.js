@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
+import AudioPlayer from "./components/AudioPlayer";
 
 const App = () => {
-  return (
-    <h1>Hello World</h1>
-  )
-}
+	return <AudioPlayer />;
+};
 
 export default App;
