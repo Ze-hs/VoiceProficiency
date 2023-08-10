@@ -7,15 +7,14 @@ const AudioPlayer = () => {
 	const [current, setCurrent] = useState(0);
 	const audioPlayer = useRef(null);
 
-	useEffect(() => {
-		if (audioPlayer.current.duration) {
-			setDuration(audioPlayer.current.duration);
-		}
-	}, []);
-
 	const handlePlayClick = () => {
 		setIsPlaying(!isPlaying);
 		isPlaying ? audioPlayer.current.pause() : audioPlayer.current.play();
+	};
+
+	const onLoadedMetadata = () => {
+		const seconds = Math.floor(audioPlayer.current.duration);
+		setDuration(seconds);
 	};
 
 	return (
@@ -26,6 +25,9 @@ const AudioPlayer = () => {
 				onTimeUpdate={(e) => console.log(e.currentTarget.currentTime)}
 				src={test}
 				type="audio/mpeg"
+				//Wait for metadata before setting duration
+				preload="metadata"
+				onLoadedMetadata={onLoadedMetadata}
 			>
 				cannot play
 			</audio>

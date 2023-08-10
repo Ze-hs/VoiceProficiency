@@ -1,0 +1,1464 @@
+{
+	"text": " So last night I was watching this movie. Have you ever seen the movie North and South? I haven't. It's kind of like Pride and Prejudice. It's really good. I haven't even seen Pride and Prejudice. I'm like way out of the loop on that kind of stuff. Well, it's a good movie. I like it. Well, I think I saw like, I didn't see the actual one. I want to say I saw one that was similar to it, kind of a takeoff version. Oh, okay. So that's like the closest thing I know about it. Oh, that's cool. Yeah, it's really good. It's one of my favorite movies. My wife would enjoy it. I bet your wife would really enjoy it. If you rented it for her and maybe got like, you guys could get some popcorn or something. I bet you would both really like it. Sounds like an okay idea. Yeah. I'm like good for that. Yeah. You know, you kind of talk about like Jim Rafferty. Yeah. The guy in the movie is like Jim Rafferty. He's just the man. Like everyone loves it. Yeah. That's cool. Yeah. I would, I'd probably check it out then. Cool. It was pretty reasonable. Awesome. Great.",
+	"segments": [
+		{
+			"id": 0,
+			"seek": 0,
+			"start": 4.420000000000001,
+			"end": 7.58,
+			"text": " So last night I was watching this movie. Have you ever seen the movie North and South?",
+			"tokens": [
+				50364, 407, 1036, 1818, 286, 390, 1976, 341, 3169, 13, 3560,
+				291, 1562, 1612, 264, 3169, 4067, 293, 4242, 30, 50748
+			],
+			"temperature": 0.0,
+			"avg_logprob": -0.23209198909019357,
+			"compression_ratio": 1.744186046511628,
+			"no_speech_prob": 0.29591259360313416,
+			"words": [
+				{
+					"word": " So",
+					"start": 4.420000000000001,
+					"end": 4.78,
+					"probability": 0.17691704630851746
+				},
+				{
+					"word": " last",
+					"start": 4.78,
+					"end": 5.14,
+					"probability": 0.7839698791503906
+				},
+				{
+					"word": " night",
+					"start": 5.14,
+					"end": 5.32,
+					"probability": 0.9935611486434937
+				},
+				{
+					"word": " I",
+					"start": 5.32,
+					"end": 5.46,
+					"probability": 0.8345736861228943
+				},
+				{
+					"word": " was",
+					"start": 5.46,
+					"end": 5.58,
+					"probability": 0.9965733289718628
+				},
+				{
+					"word": " watching",
+					"start": 5.58,
+					"end": 5.82,
+					"probability": 0.9981287121772766
+				},
+				{
+					"word": " this",
+					"start": 5.82,
+					"end": 6.04,
+					"probability": 0.9943021535873413
+				},
+				{
+					"word": " movie.",
+					"start": 6.04,
+					"end": 6.26,
+					"probability": 0.9805013537406921
+				},
+				{
+					"word": " Have",
+					"start": 6.38,
+					"end": 6.38,
+					"probability": 0.9644763469696045
+				},
+				{
+					"word": " you",
+					"start": 6.38,
+					"end": 6.42,
+					"probability": 0.9911564588546753
+				},
+				{
+					"word": " ever",
+					"start": 6.42,
+					"end": 6.52,
+					"probability": 0.9582483768463135
+				},
+				{
+					"word": " seen",
+					"start": 6.52,
+					"end": 6.72,
+					"probability": 0.9935872554779053
+				},
+				{
+					"word": " the",
+					"start": 6.72,
+					"end": 6.84,
+					"probability": 0.95708829164505
+				},
+				{
+					"word": " movie",
+					"start": 6.84,
+					"end": 6.98,
+					"probability": 0.995591402053833
+				},
+				{
+					"word": " North",
+					"start": 6.98,
+					"end": 7.2,
+					"probability": 0.6305308938026428
+				},
+				{
+					"word": " and",
+					"start": 7.2,
+					"end": 7.4,
+					"probability": 0.9592134952545166
+				},
+				{
+					"word": " South?",
+					"start": 7.4,
+					"end": 7.58,
+					"probability": 0.9852511882781982
+				}
+			]
+		},
+		{
+			"id": 1,
+			"seek": 0,
+			"start": 7.72,
+			"end": 12.36,
+			"text": " I haven't. It's kind of like Pride and Prejudice. It's really good. I haven't even seen Pride",
+			"tokens": [
+				50748, 286, 2378, 380, 13, 467, 311, 733, 295, 411, 30319, 293,
+				6001, 9218, 573, 13, 467, 311, 534, 665, 13, 286, 2378, 380,
+				754, 1612, 30319, 50984
+			],
+			"temperature": 0.0,
+			"avg_logprob": -0.23209198909019357,
+			"compression_ratio": 1.744186046511628,
+			"no_speech_prob": 0.29591259360313416,
+			"words": [
+				{
+					"word": " I",
+					"start": 7.72,
+					"end": 7.8,
+					"probability": 0.7908064126968384
+				},
+				{
+					"word": " haven't.",
+					"start": 7.8,
+					"end": 8.12,
+					"probability": 0.9795397818088531
+				},
+				{
+					"word": " It's",
+					"start": 8.28,
+					"end": 8.62,
+					"probability": 0.9731283187866211
+				},
+				{
+					"word": " kind",
+					"start": 8.62,
+					"end": 8.8,
+					"probability": 0.986184298992157
+				},
+				{
+					"word": " of",
+					"start": 8.8,
+					"end": 8.92,
+					"probability": 0.9976569414138794
+				},
+				{
+					"word": " like",
+					"start": 8.92,
+					"end": 9.08,
+					"probability": 0.9915245175361633
+				},
+				{
+					"word": " Pride",
+					"start": 9.08,
+					"end": 9.32,
+					"probability": 0.9114158749580383
+				},
+				{
+					"word": " and",
+					"start": 9.32,
+					"end": 9.48,
+					"probability": 0.9579869508743286
+				},
+				{
+					"word": " Prejudice.",
+					"start": 9.48,
+					"end": 9.98,
+					"probability": 0.9953507582346598
+				},
+				{
+					"word": " It's",
+					"start": 10.12,
+					"end": 10.26,
+					"probability": 0.9900809824466705
+				},
+				{
+					"word": " really",
+					"start": 10.26,
+					"end": 10.5,
+					"probability": 0.9980186223983765
+				},
+				{
+					"word": " good.",
+					"start": 10.5,
+					"end": 10.84,
+					"probability": 0.9985398054122925
+				},
+				{
+					"word": " I",
+					"start": 11.16,
+					"end": 11.2,
+					"probability": 0.9774026274681091
+				},
+				{
+					"word": " haven't",
+					"start": 11.2,
+					"end": 11.88,
+					"probability": 0.7493427097797394
+				},
+				{
+					"word": " even",
+					"start": 11.88,
+					"end": 12.0,
+					"probability": 0.8356931805610657
+				},
+				{
+					"word": " seen",
+					"start": 12.0,
+					"end": 12.12,
+					"probability": 0.9570792317390442
+				},
+				{
+					"word": " Pride",
+					"start": 12.12,
+					"end": 12.36,
+					"probability": 0.955641508102417
+				}
+			]
+		},
+		{
+			"id": 2,
+			"seek": 0,
+			"start": 12.36,
+			"end": 17.66,
+			"text": " and Prejudice. I'm like way out of the loop on that kind of stuff. Well, it's a good movie.",
+			"tokens": [
+				50984, 293, 6001, 9218, 573, 13, 286, 478, 411, 636, 484, 295,
+				264, 6367, 322, 300, 733, 295, 1507, 13, 1042, 11, 309, 311,
+				257, 665, 3169, 13, 51252
+			],
+			"temperature": 0.0,
+			"avg_logprob": -0.23209198909019357,
+			"compression_ratio": 1.744186046511628,
+			"no_speech_prob": 0.29591259360313416,
+			"words": [
+				{
+					"word": " and",
+					"start": 12.36,
+					"end": 12.52,
+					"probability": 0.9804103970527649
+				},
+				{
+					"word": " Prejudice.",
+					"start": 12.52,
+					"end": 12.92,
+					"probability": 0.9977712432543436
+				},
+				{
+					"word": " I'm",
+					"start": 13.0,
+					"end": 13.22,
+					"probability": 0.642835944890976
+				},
+				{
+					"word": " like",
+					"start": 13.22,
+					"end": 13.34,
+					"probability": 0.8756967186927795
+				},
+				{
+					"word": " way",
+					"start": 13.34,
+					"end": 13.62,
+					"probability": 0.8605618476867676
+				},
+				{
+					"word": " out",
+					"start": 13.62,
+					"end": 13.74,
+					"probability": 0.9879984855651855
+				},
+				{
+					"word": " of",
+					"start": 13.74,
+					"end": 13.8,
+					"probability": 0.9918239712715149
+				},
+				{
+					"word": " the",
+					"start": 13.8,
+					"end": 13.88,
+					"probability": 0.9908674955368042
+				},
+				{
+					"word": " loop",
+					"start": 13.88,
+					"end": 14.06,
+					"probability": 0.9873301982879639
+				},
+				{
+					"word": " on",
+					"start": 14.06,
+					"end": 14.3,
+					"probability": 0.9216930866241455
+				},
+				{
+					"word": " that",
+					"start": 14.3,
+					"end": 15.02,
+					"probability": 0.8524802923202515
+				},
+				{
+					"word": " kind",
+					"start": 15.02,
+					"end": 15.22,
+					"probability": 0.9534845948219299
+				},
+				{
+					"word": " of",
+					"start": 15.22,
+					"end": 15.34,
+					"probability": 0.9982391595840454
+				},
+				{
+					"word": " stuff.",
+					"start": 15.34,
+					"end": 15.56,
+					"probability": 0.99834144115448
+				},
+				{
+					"word": " Well,",
+					"start": 15.92,
+					"end": 16.14,
+					"probability": 0.6596755981445312
+				},
+				{
+					"word": " it's",
+					"start": 16.38,
+					"end": 17.24,
+					"probability": 0.9833137094974518
+				},
+				{
+					"word": " a",
+					"start": 17.24,
+					"end": 17.32,
+					"probability": 0.38896042108535767
+				},
+				{
+					"word": " good",
+					"start": 17.32,
+					"end": 17.44,
+					"probability": 0.9989445805549622
+				},
+				{
+					"word": " movie.",
+					"start": 17.44,
+					"end": 17.66,
+					"probability": 0.9972412586212158
+				}
+			]
+		},
+		{
+			"id": 3,
+			"seek": 0,
+			"start": 17.76,
+			"end": 23.32,
+			"text": " I like it. Well, I think I saw like, I didn't see the actual one. I want to say I saw one",
+			"tokens": [
+				51252, 286, 411, 309, 13, 1042, 11, 286, 519, 286, 1866, 411,
+				11, 286, 994, 380, 536, 264, 3539, 472, 13, 286, 528, 281, 584,
+				286, 1866, 472, 51528
+			],
+			"temperature": 0.0,
+			"avg_logprob": -0.23209198909019357,
+			"compression_ratio": 1.744186046511628,
+			"no_speech_prob": 0.29591259360313416,
+			"words": [
+				{
+					"word": " I",
+					"start": 17.76,
+					"end": 17.86,
+					"probability": 0.9909610152244568
+				},
+				{
+					"word": " like",
+					"start": 17.86,
+					"end": 18.04,
+					"probability": 0.992517352104187
+				},
+				{
+					"word": " it.",
+					"start": 18.04,
+					"end": 18.26,
+					"probability": 0.9958807229995728
+				},
+				{
+					"word": " Well,",
+					"start": 18.28,
+					"end": 18.36,
+					"probability": 0.8460936546325684
+				},
+				{
+					"word": " I",
+					"start": 18.42,
+					"end": 18.5,
+					"probability": 0.9977898597717285
+				},
+				{
+					"word": " think",
+					"start": 18.5,
+					"end": 18.64,
+					"probability": 0.9052940011024475
+				},
+				{
+					"word": " I",
+					"start": 18.64,
+					"end": 18.8,
+					"probability": 0.9854623079299927
+				},
+				{
+					"word": " saw",
+					"start": 18.8,
+					"end": 18.92,
+					"probability": 0.9901683330535889
+				},
+				{
+					"word": " like,",
+					"start": 18.92,
+					"end": 19.2,
+					"probability": 0.8918572664260864
+				},
+				{
+					"word": " I",
+					"start": 19.58,
+					"end": 20.74,
+					"probability": 0.6830745339393616
+				},
+				{
+					"word": " didn't",
+					"start": 20.74,
+					"end": 21.08,
+					"probability": 0.9620088934898376
+				},
+				{
+					"word": " see",
+					"start": 21.08,
+					"end": 21.2,
+					"probability": 0.9972569346427917
+				},
+				{
+					"word": " the",
+					"start": 21.2,
+					"end": 21.32,
+					"probability": 0.9983534812927246
+				},
+				{
+					"word": " actual",
+					"start": 21.32,
+					"end": 21.56,
+					"probability": 0.9981592297554016
+				},
+				{
+					"word": " one.",
+					"start": 21.56,
+					"end": 21.84,
+					"probability": 0.9857072234153748
+				},
+				{
+					"word": " I",
+					"start": 21.94,
+					"end": 22.06,
+					"probability": 0.9964005947113037
+				},
+				{
+					"word": " want",
+					"start": 22.06,
+					"end": 22.16,
+					"probability": 0.8758857846260071
+				},
+				{
+					"word": " to",
+					"start": 22.16,
+					"end": 22.62,
+					"probability": 0.8164020776748657
+				},
+				{
+					"word": " say",
+					"start": 22.62,
+					"end": 22.8,
+					"probability": 0.9781360030174255
+				},
+				{
+					"word": " I",
+					"start": 22.8,
+					"end": 22.98,
+					"probability": 0.938705563545227
+				},
+				{
+					"word": " saw",
+					"start": 22.98,
+					"end": 23.1,
+					"probability": 0.9983242154121399
+				},
+				{
+					"word": " one",
+					"start": 23.1,
+					"end": 23.32,
+					"probability": 0.9981750249862671
+				}
+			]
+		},
+		{
+			"id": 4,
+			"seek": 0,
+			"start": 23.32,
+			"end": 28.44,
+			"text": " that was similar to it, kind of a takeoff version. Oh, okay. So that's like the closest",
+			"tokens": [
+				51528, 300, 390, 2531, 281, 309, 11, 733, 295, 257, 747, 4506,
+				3037, 13, 876, 11, 1392, 13, 407, 300, 311, 411, 264, 13699,
+				51794
+			],
+			"temperature": 0.0,
+			"avg_logprob": -0.23209198909019357,
+			"compression_ratio": 1.744186046511628,
+			"no_speech_prob": 0.29591259360313416,
+			"words": [
+				{
+					"word": " that",
+					"start": 23.32,
+					"end": 23.44,
+					"probability": 0.9971989393234253
+				},
+				{
+					"word": " was",
+					"start": 23.44,
+					"end": 23.58,
+					"probability": 0.9979290962219238
+				},
+				{
+					"word": " similar",
+					"start": 23.58,
+					"end": 23.94,
+					"probability": 0.9975852966308594
+				},
+				{
+					"word": " to",
+					"start": 23.94,
+					"end": 24.24,
+					"probability": 0.9990412592887878
+				},
+				{
+					"word": " it,",
+					"start": 24.24,
+					"end": 24.4,
+					"probability": 0.9675872325897217
+				},
+				{
+					"word": " kind",
+					"start": 24.44,
+					"end": 24.64,
+					"probability": 0.8792085647583008
+				},
+				{
+					"word": " of",
+					"start": 24.64,
+					"end": 24.74,
+					"probability": 0.9992210865020752
+				},
+				{
+					"word": " a",
+					"start": 24.74,
+					"end": 24.84,
+					"probability": 0.9877453446388245
+				},
+				{
+					"word": " takeoff",
+					"start": 24.84,
+					"end": 25.18,
+					"probability": 0.7650433778762817
+				},
+				{
+					"word": " version.",
+					"start": 25.18,
+					"end": 25.64,
+					"probability": 0.9983314871788025
+				},
+				{
+					"word": " Oh,",
+					"start": 26.1,
+					"end": 26.46,
+					"probability": 0.8682365417480469
+				},
+				{
+					"word": " okay.",
+					"start": 26.58,
+					"end": 26.74,
+					"probability": 0.8351035118103027
+				},
+				{
+					"word": " So",
+					"start": 26.74,
+					"end": 26.94,
+					"probability": 0.3762575387954712
+				},
+				{
+					"word": " that's",
+					"start": 26.94,
+					"end": 27.94,
+					"probability": 0.8406035602092743
+				},
+				{
+					"word": " like",
+					"start": 27.94,
+					"end": 28.06,
+					"probability": 0.7591436505317688
+				},
+				{
+					"word": " the",
+					"start": 28.06,
+					"end": 28.18,
+					"probability": 0.9834532141685486
+				},
+				{
+					"word": " closest",
+					"start": 28.18,
+					"end": 28.44,
+					"probability": 0.9730389714241028
+				}
+			]
+		},
+		{
+			"id": 5,
+			"seek": 2844,
+			"start": 28.44,
+			"end": 32.96,
+			"text": " thing I know about it. Oh, that's cool. Yeah, it's really good. It's one of my favorite movies.",
+			"tokens": [
+				50368, 551, 286, 458, 466, 309, 13, 876, 11, 300, 311, 1627, 13,
+				865, 11, 309, 311, 534, 665, 13, 467, 311, 472, 295, 452, 2954,
+				6233, 13, 50592
+			],
+			"temperature": 0.0,
+			"avg_logprob": -0.18246416560190168,
+			"compression_ratio": 1.8349206349206348,
+			"no_speech_prob": 0.014836899936199188,
+			"words": [
+				{
+					"word": " thing",
+					"start": 28.44,
+					"end": 28.72,
+					"probability": 0.12568409740924835
+				},
+				{
+					"word": " I",
+					"start": 28.72,
+					"end": 28.84,
+					"probability": 0.9217608571052551
+				},
+				{
+					"word": " know",
+					"start": 28.84,
+					"end": 29.0,
+					"probability": 0.9944646954536438
+				},
+				{
+					"word": " about",
+					"start": 29.0,
+					"end": 29.24,
+					"probability": 0.9942981600761414
+				},
+				{
+					"word": " it.",
+					"start": 29.24,
+					"end": 29.5,
+					"probability": 0.9291355013847351
+				},
+				{
+					"word": " Oh,",
+					"start": 29.68,
+					"end": 29.78,
+					"probability": 0.805490255355835
+				},
+				{
+					"word": " that's",
+					"start": 29.78,
+					"end": 30.04,
+					"probability": 0.9890065491199493
+				},
+				{
+					"word": " cool.",
+					"start": 30.04,
+					"end": 30.22,
+					"probability": 0.9951045513153076
+				},
+				{
+					"word": " Yeah,",
+					"start": 30.4,
+					"end": 30.6,
+					"probability": 0.9574106335639954
+				},
+				{
+					"word": " it's",
+					"start": 30.78,
+					"end": 31.22,
+					"probability": 0.9897373616695404
+				},
+				{
+					"word": " really",
+					"start": 31.22,
+					"end": 31.62,
+					"probability": 0.3420558571815491
+				},
+				{
+					"word": " good.",
+					"start": 31.62,
+					"end": 31.82,
+					"probability": 0.9973199963569641
+				},
+				{
+					"word": " It's",
+					"start": 31.92,
+					"end": 32.02,
+					"probability": 0.9932105541229248
+				},
+				{
+					"word": " one",
+					"start": 32.02,
+					"end": 32.14,
+					"probability": 0.9953183531761169
+				},
+				{
+					"word": " of",
+					"start": 32.14,
+					"end": 32.22,
+					"probability": 0.9968066215515137
+				},
+				{
+					"word": " my",
+					"start": 32.22,
+					"end": 32.36,
+					"probability": 0.997804582118988
+				},
+				{
+					"word": " favorite",
+					"start": 32.36,
+					"end": 32.6,
+					"probability": 0.9885346293449402
+				},
+				{
+					"word": " movies.",
+					"start": 32.6,
+					"end": 32.96,
+					"probability": 0.9961697459220886
+				}
+			]
+		},
+		{
+			"id": 6,
+			"seek": 2844,
+			"start": 33.4,
+			"end": 37.84,
+			"text": " My wife would enjoy it. I bet your wife would really enjoy it. If you rented it for her and maybe",
+			"tokens": [
+				50620, 1222, 3836, 576, 2103, 309, 13, 286, 778, 428, 3836, 576,
+				534, 2103, 309, 13, 759, 291, 32381, 309, 337, 720, 293, 1310,
+				50832
+			],
+			"temperature": 0.0,
+			"avg_logprob": -0.18246416560190168,
+			"compression_ratio": 1.8349206349206348,
+			"no_speech_prob": 0.014836899936199188,
+			"words": [
+				{
+					"word": " My",
+					"start": 33.4,
+					"end": 33.76,
+					"probability": 0.3376593589782715
+				},
+				{
+					"word": " wife",
+					"start": 33.76,
+					"end": 34.06,
+					"probability": 0.9971203804016113
+				},
+				{
+					"word": " would",
+					"start": 34.06,
+					"end": 34.18,
+					"probability": 0.9906162619590759
+				},
+				{
+					"word": " enjoy",
+					"start": 34.18,
+					"end": 34.46,
+					"probability": 0.9912286996841431
+				},
+				{
+					"word": " it.",
+					"start": 34.46,
+					"end": 34.74,
+					"probability": 0.9464878439903259
+				},
+				{
+					"word": " I",
+					"start": 34.88,
+					"end": 35.04,
+					"probability": 0.9668115377426147
+				},
+				{
+					"word": " bet",
+					"start": 35.04,
+					"end": 35.18,
+					"probability": 0.6164752840995789
+				},
+				{
+					"word": " your",
+					"start": 35.18,
+					"end": 35.34,
+					"probability": 0.9836522340774536
+				},
+				{
+					"word": " wife",
+					"start": 35.34,
+					"end": 35.56,
+					"probability": 0.9979811310768127
+				},
+				{
+					"word": " would",
+					"start": 35.56,
+					"end": 35.7,
+					"probability": 0.9976207613945007
+				},
+				{
+					"word": " really",
+					"start": 35.7,
+					"end": 35.92,
+					"probability": 0.996703565120697
+				},
+				{
+					"word": " enjoy",
+					"start": 35.92,
+					"end": 36.18,
+					"probability": 0.9915279150009155
+				},
+				{
+					"word": " it.",
+					"start": 36.18,
+					"end": 36.34,
+					"probability": 0.8515738844871521
+				},
+				{
+					"word": " If",
+					"start": 36.36,
+					"end": 36.44,
+					"probability": 0.9779711365699768
+				},
+				{
+					"word": " you",
+					"start": 36.44,
+					"end": 36.56,
+					"probability": 0.9982525706291199
+				},
+				{
+					"word": " rented",
+					"start": 36.56,
+					"end": 36.8,
+					"probability": 0.830108642578125
+				},
+				{
+					"word": " it",
+					"start": 36.8,
+					"end": 37.02,
+					"probability": 0.9940333962440491
+				},
+				{
+					"word": " for",
+					"start": 37.02,
+					"end": 37.16,
+					"probability": 0.9979032278060913
+				},
+				{
+					"word": " her",
+					"start": 37.16,
+					"end": 37.42,
+					"probability": 0.9984569549560547
+				},
+				{
+					"word": " and",
+					"start": 37.42,
+					"end": 37.64,
+					"probability": 0.8296300172805786
+				},
+				{
+					"word": " maybe",
+					"start": 37.64,
+					"end": 37.84,
+					"probability": 0.9841465353965759
+				}
+			]
+		},
+		{
+			"id": 7,
+			"seek": 2844,
+			"start": 37.84,
+			"end": 41.74,
+			"text": " got like, you guys could get some popcorn or something. I bet you would both really like it.",
+			"tokens": [
+				50832, 658, 411, 11, 291, 1074, 727, 483, 512, 25334, 420, 746,
+				13, 286, 778, 291, 576, 1293, 534, 411, 309, 13, 51040
+			],
+			"temperature": 0.0,
+			"avg_logprob": -0.18246416560190168,
+			"compression_ratio": 1.8349206349206348,
+			"no_speech_prob": 0.014836899936199188,
+			"words": [
+				{
+					"word": " got",
+					"start": 37.84,
+					"end": 38.1,
+					"probability": 0.7271418571472168
+				},
+				{
+					"word": " like,",
+					"start": 38.1,
+					"end": 38.38,
+					"probability": 0.7822721004486084
+				},
+				{
+					"word": " you",
+					"start": 38.74,
+					"end": 38.86,
+					"probability": 0.9743554592132568
+				},
+				{
+					"word": " guys",
+					"start": 38.86,
+					"end": 39.02,
+					"probability": 0.9920886754989624
+				},
+				{
+					"word": " could",
+					"start": 39.02,
+					"end": 39.16,
+					"probability": 0.8833127021789551
+				},
+				{
+					"word": " get",
+					"start": 39.16,
+					"end": 39.3,
+					"probability": 0.9986504912376404
+				},
+				{
+					"word": " some",
+					"start": 39.3,
+					"end": 39.48,
+					"probability": 0.9866674542427063
+				},
+				{
+					"word": " popcorn",
+					"start": 39.48,
+					"end": 39.78,
+					"probability": 0.9891694784164429
+				},
+				{
+					"word": " or",
+					"start": 39.78,
+					"end": 40.06,
+					"probability": 0.9893288016319275
+				},
+				{
+					"word": " something.",
+					"start": 40.06,
+					"end": 40.26,
+					"probability": 0.9989864230155945
+				},
+				{
+					"word": " I",
+					"start": 40.42,
+					"end": 40.48,
+					"probability": 0.9957656860351562
+				},
+				{
+					"word": " bet",
+					"start": 40.48,
+					"end": 40.6,
+					"probability": 0.9964565634727478
+				},
+				{
+					"word": " you",
+					"start": 40.6,
+					"end": 40.74,
+					"probability": 0.9968783855438232
+				},
+				{
+					"word": " would",
+					"start": 40.74,
+					"end": 40.84,
+					"probability": 0.9527748227119446
+				},
+				{
+					"word": " both",
+					"start": 40.84,
+					"end": 41.02,
+					"probability": 0.9948697090148926
+				},
+				{
+					"word": " really",
+					"start": 41.02,
+					"end": 41.28,
+					"probability": 0.9976945519447327
+				},
+				{
+					"word": " like",
+					"start": 41.28,
+					"end": 41.54,
+					"probability": 0.9961352348327637
+				},
+				{
+					"word": " it.",
+					"start": 41.54,
+					"end": 41.74,
+					"probability": 0.9968697428703308
+				}
+			]
+		},
+		{
+			"id": 8,
+			"seek": 2844,
+			"start": 41.96,
+			"end": 46.22,
+			"text": " Sounds like an okay idea. Yeah. I'm like good for that. Yeah. You know, you kind of talk about",
+			"tokens": [
+				51040, 14576, 411, 364, 1392, 1558, 13, 865, 13, 286, 478, 411,
+				665, 337, 300, 13, 865, 13, 509, 458, 11, 291, 733, 295, 751,
+				466, 51248
+			],
+			"temperature": 0.0,
+			"avg_logprob": -0.18246416560190168,
+			"compression_ratio": 1.8349206349206348,
+			"no_speech_prob": 0.014836899936199188,
+			"words": [
+				{
+					"word": " Sounds",
+					"start": 41.96,
+					"end": 42.26,
+					"probability": 0.665107011795044
+				},
+				{
+					"word": " like",
+					"start": 42.26,
+					"end": 42.48,
+					"probability": 0.9934968948364258
+				},
+				{
+					"word": " an",
+					"start": 42.48,
+					"end": 42.62,
+					"probability": 0.8968842029571533
+				},
+				{
+					"word": " okay",
+					"start": 42.62,
+					"end": 42.78,
+					"probability": 0.8851050734519958
+				},
+				{
+					"word": " idea.",
+					"start": 42.78,
+					"end": 43.14,
+					"probability": 0.9727191925048828
+				},
+				{
+					"word": " Yeah.",
+					"start": 43.54,
+					"end": 43.68,
+					"probability": 0.7066656947135925
+				},
+				{
+					"word": " I'm",
+					"start": 43.86,
+					"end": 43.96,
+					"probability": 0.5249013155698776
+				},
+				{
+					"word": " like",
+					"start": 43.96,
+					"end": 44.08,
+					"probability": 0.1298968344926834
+				},
+				{
+					"word": " good",
+					"start": 44.08,
+					"end": 44.22,
+					"probability": 0.6193473935127258
+				},
+				{
+					"word": " for",
+					"start": 44.22,
+					"end": 44.36,
+					"probability": 0.9959653615951538
+				},
+				{
+					"word": " that.",
+					"start": 44.36,
+					"end": 44.52,
+					"probability": 0.9959618449211121
+				},
+				{
+					"word": " Yeah.",
+					"start": 44.76,
+					"end": 44.92,
+					"probability": 0.7858841419219971
+				},
+				{
+					"word": " You",
+					"start": 45.26,
+					"end": 45.38,
+					"probability": 0.9839662909507751
+				},
+				{
+					"word": " know,",
+					"start": 45.38,
+					"end": 45.48,
+					"probability": 0.9595929384231567
+				},
+				{
+					"word": " you",
+					"start": 45.52,
+					"end": 45.6,
+					"probability": 0.9938058853149414
+				},
+				{
+					"word": " kind",
+					"start": 45.6,
+					"end": 45.76,
+					"probability": 0.8039559125900269
+				},
+				{
+					"word": " of",
+					"start": 45.76,
+					"end": 45.86,
+					"probability": 0.9957115650177002
+				},
+				{
+					"word": " talk",
+					"start": 45.86,
+					"end": 46.0,
+					"probability": 0.9755315184593201
+				},
+				{
+					"word": " about",
+					"start": 46.0,
+					"end": 46.22,
+					"probability": 0.9987909197807312
+				}
+			]
+		},
+		{
+			"id": 9,
+			"seek": 2844,
+			"start": 46.22,
+			"end": 50.96,
+			"text": " like Jim Rafferty. Yeah. The guy in the movie is like Jim Rafferty. He's just the man. Like everyone",
+			"tokens": [
+				51248, 411, 6637, 497, 2518, 260, 874, 13, 865, 13, 440, 2146,
+				294, 264, 3169, 307, 411, 6637, 497, 2518, 260, 874, 13, 634,
+				311, 445, 264, 587, 13, 1743, 1518, 51492
+			],
+			"temperature": 0.0,
+			"avg_logprob": -0.18246416560190168,
+			"compression_ratio": 1.8349206349206348,
+			"no_speech_prob": 0.014836899936199188,
+			"words": [
+				{
+					"word": " like",
+					"start": 46.22,
+					"end": 46.38,
+					"probability": 0.9374626278877258
+				},
+				{
+					"word": " Jim",
+					"start": 46.38,
+					"end": 46.58,
+					"probability": 0.6761972308158875
+				},
+				{
+					"word": " Rafferty.",
+					"start": 46.58,
+					"end": 46.88,
+					"probability": 0.48708994686603546
+				},
+				{
+					"word": " Yeah.",
+					"start": 47.32,
+					"end": 47.44,
+					"probability": 0.6207674145698547
+				},
+				{
+					"word": " The",
+					"start": 47.68,
+					"end": 47.82,
+					"probability": 0.9679149389266968
+				},
+				{
+					"word": " guy",
+					"start": 47.82,
+					"end": 48.04,
+					"probability": 0.9987820982933044
+				},
+				{
+					"word": " in",
+					"start": 48.04,
+					"end": 48.22,
+					"probability": 0.9985759258270264
+				},
+				{
+					"word": " the",
+					"start": 48.22,
+					"end": 48.3,
+					"probability": 0.9995194673538208
+				},
+				{
+					"word": " movie",
+					"start": 48.3,
+					"end": 48.52,
+					"probability": 0.984286904335022
+				},
+				{
+					"word": " is",
+					"start": 48.52,
+					"end": 48.7,
+					"probability": 0.9860592484474182
+				},
+				{
+					"word": " like",
+					"start": 48.7,
+					"end": 48.84,
+					"probability": 0.9752330183982849
+				},
+				{
+					"word": " Jim",
+					"start": 48.84,
+					"end": 49.02,
+					"probability": 0.9634974598884583
+				},
+				{
+					"word": " Rafferty.",
+					"start": 49.02,
+					"end": 49.26,
+					"probability": 0.9142836928367615
+				},
+				{
+					"word": " He's",
+					"start": 49.34,
+					"end": 49.54,
+					"probability": 0.9883697330951691
+				},
+				{
+					"word": " just",
+					"start": 49.54,
+					"end": 49.66,
+					"probability": 0.9944475889205933
+				},
+				{
+					"word": " the",
+					"start": 49.66,
+					"end": 49.88,
+					"probability": 0.9507917165756226
+				},
+				{
+					"word": " man.",
+					"start": 49.88,
+					"end": 50.26,
+					"probability": 0.9383370280265808
+				},
+				{
+					"word": " Like",
+					"start": 50.56,
+					"end": 50.62,
+					"probability": 0.7520398497581482
+				},
+				{
+					"word": " everyone",
+					"start": 50.62,
+					"end": 50.96,
+					"probability": 0.6772815585136414
+				}
+			]
+		},
+		{
+			"id": 10,
+			"seek": 2844,
+			"start": 50.96,
+			"end": 55.76,
+			"text": " loves it. Yeah. That's cool. Yeah. I would, I'd probably check it out then. Cool. It was pretty",
+			"tokens": [
+				51492, 6752, 309, 13, 865, 13, 663, 311, 1627, 13, 865, 13, 286,
+				576, 11, 286, 1116, 1391, 1520, 309, 484, 550, 13, 8561, 13,
+				467, 390, 1238, 51728
+			],
+			"temperature": 0.0,
+			"avg_logprob": -0.18246416560190168,
+			"compression_ratio": 1.8349206349206348,
+			"no_speech_prob": 0.014836899936199188,
+			"words": [
+				{
+					"word": " loves",
+					"start": 50.96,
+					"end": 51.34,
+					"probability": 0.8734621405601501
+				},
+				{
+					"word": " it.",
+					"start": 51.34,
+					"end": 51.64,
+					"probability": 0.8491290807723999
+				},
+				{
+					"word": " Yeah.",
+					"start": 51.94,
+					"end": 51.94,
+					"probability": 0.476592093706131
+				},
+				{
+					"word": " That's",
+					"start": 52.08,
+					"end": 52.34,
+					"probability": 0.9710939228534698
+				},
+				{
+					"word": " cool.",
+					"start": 52.34,
+					"end": 52.58,
+					"probability": 0.9950738549232483
+				},
+				{
+					"word": " Yeah.",
+					"start": 52.84,
+					"end": 52.96,
+					"probability": 0.8820944428443909
+				},
+				{
+					"word": " I",
+					"start": 53.14,
+					"end": 53.32,
+					"probability": 0.99473637342453
+				},
+				{
+					"word": " would,",
+					"start": 53.32,
+					"end": 53.46,
+					"probability": 0.8586286902427673
+				},
+				{
+					"word": " I'd",
+					"start": 53.56,
+					"end": 53.74,
+					"probability": 0.9497739970684052
+				},
+				{
+					"word": " probably",
+					"start": 53.74,
+					"end": 53.9,
+					"probability": 0.9939000606536865
+				},
+				{
+					"word": " check",
+					"start": 53.9,
+					"end": 54.12,
+					"probability": 0.9977434873580933
+				},
+				{
+					"word": " it",
+					"start": 54.12,
+					"end": 54.26,
+					"probability": 0.9989466071128845
+				},
+				{
+					"word": " out",
+					"start": 54.26,
+					"end": 54.46,
+					"probability": 0.9991915822029114
+				},
+				{
+					"word": " then.",
+					"start": 54.46,
+					"end": 54.72,
+					"probability": 0.8275296092033386
+				},
+				{
+					"word": " Cool.",
+					"start": 55.22,
+					"end": 55.32,
+					"probability": 0.43928444385528564
+				},
+				{
+					"word": " It",
+					"start": 55.38,
+					"end": 55.42,
+					"probability": 0.4143255054950714
+				},
+				{
+					"word": " was",
+					"start": 55.42,
+					"end": 55.58,
+					"probability": 0.7576891779899597
+				},
+				{
+					"word": " pretty",
+					"start": 55.58,
+					"end": 55.76,
+					"probability": 0.9956800937652588
+				}
+			]
+		},
+		{
+			"id": 11,
+			"seek": 5576,
+			"start": 55.76,
+			"end": 57.88,
+			"text": " reasonable. Awesome. Great.",
+			"tokens": [50364, 10585, 13, 10391, 13, 3769, 13, 50520],
+			"temperature": 0.0,
+			"avg_logprob": -0.39403960439893937,
+			"compression_ratio": 0.8181818181818182,
+			"no_speech_prob": 0.12681829929351807,
+			"words": [
+				{
+					"word": " reasonable.",
+					"start": 55.76,
+					"end": 56.22,
+					"probability": 0.7652242183685303
+				},
+				{
+					"word": " Awesome.",
+					"start": 56.78,
+					"end": 57.16,
+					"probability": 0.6086413264274597
+				},
+				{
+					"word": " Great.",
+					"start": 57.56,
+					"end": 57.88,
+					"probability": 0.9779938459396362
+				}
+			]
+		}
+	],
+	"language": "English"
+}
