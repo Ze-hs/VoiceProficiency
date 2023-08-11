@@ -1,12 +1,24 @@
-import React, { useEffect, useRef, useState } from "react";
-import test from "../audio/test.mp3";
+import React, {
+	forwardRef,
+	useEffect,
+	useImperativeHandle,
+	useRef,
+	useState,
+} from "react";
+import sample from "../audio/Sample.mp3";
 
-const AudioPlayer = () => {
+const AudioPlayer = forwardRef((props, ref) => {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [duration, setDuration] = useState(0);
-	const [current, setCurrent] = useState(0);
+	const [currentTime, setCurrentTime] = useState(0);
 	const audioPlayer = useRef(null);
 
+	useEffect(() => {
+		// audioPlayer.current.addEventListener("timeupdate", updateCurrentTime);
+		console.log(audioPlayer.current);
+	}, []);
+
+	useImperativeHandle(ref, () => audioPlayer.current);
 	const handlePlayClick = () => {
 		setIsPlaying(!isPlaying);
 		isPlaying ? audioPlayer.current.pause() : audioPlayer.current.play();
@@ -17,13 +29,18 @@ const AudioPlayer = () => {
 		setDuration(seconds);
 	};
 
+	const updateCurrentTime = (event) => {
+		setCurrentTime(event.currentTarget.currentTime);
+		console.log(event.currentTarget.currentTime);
+	};
+
 	return (
 		<>
 			<div>audioPlayer</div>
 			<audio
 				ref={audioPlayer}
-				onTimeUpdate={(e) => console.log(e.currentTarget.currentTime)}
-				src={test}
+				onTimeUpdate={updateCurrentTime}
+				src={sample}
 				type="audio/mpeg"
 				//Wait for metadata before setting duration
 				preload="metadata"
@@ -36,12 +53,12 @@ const AudioPlayer = () => {
 				<button onClick={handlePlayClick}>
 					{isPlaying ? "pause" : "play"}
 				</button>
-				<p>current time:</p>
+				<p>{currentTime}</p>
 				<input type="range"></input>
 				<p>{duration}</p>
 			</div>
 		</>
 	);
-};
+});
 
 export default AudioPlayer;

@@ -1,0 +1,13 @@
+.active-word{
+	background-color: red;
+}
+
+.highlight{
+	background-color: red;
+	display: inline-block;
+	position: absolute;
+	top:0;
+	left:0;
+	transition:  .1s ease 0s; /* only transition top property */
+
+}
