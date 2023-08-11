@@ -13,11 +13,6 @@ const AudioPlayer = forwardRef((props, ref) => {
 	const [currentTime, setCurrentTime] = useState(0);
 	const audioPlayer = useRef(null);
 
-	useEffect(() => {
-		// audioPlayer.current.addEventListener("timeupdate", updateCurrentTime);
-		console.log(audioPlayer.current);
-	}, []);
-
 	useImperativeHandle(ref, () => audioPlayer.current);
 	const handlePlayClick = () => {
 		setIsPlaying(!isPlaying);
@@ -31,7 +26,6 @@ const AudioPlayer = forwardRef((props, ref) => {
 
 	const updateCurrentTime = (event) => {
 		setCurrentTime(event.currentTarget.currentTime);
-		console.log(event.currentTarget.currentTime);
 	};
 
 	return (

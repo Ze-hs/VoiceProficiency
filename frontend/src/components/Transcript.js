@@ -8,15 +8,13 @@ const Transcript = ({ audioPlayerRef }) => {
 	const [transcript, setTranscript] = useState([]);
 	const wordsRef = useRef(null);
 	const [highlightPos, setHighlightPos] = useState(null);
-	const highlightRef = useRef(null);
 
 	useEffect(() => {
 		setTranscript(utils.formatTranscript(transcriptData.segments));
 	}, []);
 
 	useEffect(() => {
-		console.log(transcript);
-
+		const playerCur = audioPlayerRef.current;
 		const ontimeupdate = () => {
 			const activeWordIndex = transcript.findIndex((word) => {
 				return word.start > audioPlayerRef.current.currentTime;
@@ -25,16 +23,18 @@ const Transcript = ({ audioPlayerRef }) => {
 			if (activeWordIndex !== -1) {
 				const activeWord = wordsRef.current.childNodes[activeWordIndex];
 				setHighlightPos(getWordProperty(activeWord));
-
-				highlightRef.current.cssText = getWordProperty(activeWord);
 			}
 
 			// activeWord.classList.add("active-word");
 		};
 
 		if (audioPlayerRef && audioPlayerRef.current) {
-			audioPlayerRef.current.addEventListener("timeupdate", ontimeupdate);
+			playerCur.addEventListener("timeupdate", ontimeupdate);
 		}
+
+		return () => {
+			playerCur.removeEventListener("timeupdate", ontimeupdate);
+		};
 	}, [audioPlayerRef, transcript]);
 
 	const getWordProperty = ({
@@ -43,15 +43,12 @@ const Transcript = ({ audioPlayerRef }) => {
 		offsetTop,
 		offsetLeft,
 	}) => {
-		const style = {
-			width: offsetWidth,
-			height: offsetHeight,
-			top: offsetTop,
-			left: offsetLeft,
+		return {
+			width: `${offsetWidth}px`,
+			height: `${offsetHeight}px`,
+			top: `${offsetTop}px`,
+			left: `${offsetLeft}px`,
 		};
-
-		console.log(JSON.stringify(style));
-		return "";
 	};
 
 	const getConfidenceStyle = (confidence) => {
@@ -69,7 +66,7 @@ const Transcript = ({ audioPlayerRef }) => {
 					))
 				)}
 			</span>
-			<div className="highlight" ref={highlightRef}></div>
+			<div className="highlight" style={{ ...highlightPos }}></div>
 		</div>
 	);
 };
