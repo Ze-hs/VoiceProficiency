@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import transcriptData from "../audio/Sample.json";
 import utils from "../utils/helper";
+
 //Testing purposes delete late
 import data from "../audio/Sample.json";
 
@@ -9,23 +10,28 @@ const Transcript = ({ audioPlayerRef }) => {
 	const wordsRef = useRef(null);
 	const [highlightPos, setHighlightPos] = useState(null);
 
+	//change this once backend is finalized
 	useEffect(() => {
 		setTranscript(utils.formatTranscript(transcriptData.segments));
 	}, []);
 
 	useEffect(() => {
 		const playerCur = audioPlayerRef.current;
+
 		const ontimeupdate = () => {
 			const activeWordIndex = transcript.findIndex((word) => {
-				return word.start > audioPlayerRef.current.currentTime;
+				return word.start >= audioPlayerRef.current.currentTime;
 			});
 
 			if (activeWordIndex !== -1) {
 				const activeWord = wordsRef.current.childNodes[activeWordIndex];
-				setHighlightPos(getWordProperty(activeWord));
+				setHighlightPos(
+					getWordProperty(
+						wordsRef.current.getBoundingClientRect(),
+						activeWord.getBoundingClientRect()
+					)
+				);
 			}
-
-			// activeWord.classList.add("active-word");
 		};
 
 		if (audioPlayerRef && audioPlayerRef.current) {
@@ -37,17 +43,12 @@ const Transcript = ({ audioPlayerRef }) => {
 		};
 	}, [audioPlayerRef, transcript]);
 
-	const getWordProperty = ({
-		offsetWidth,
-		offsetHeight,
-		offsetTop,
-		offsetLeft,
-	}) => {
+	const getWordProperty = (parent, child) => {
 		return {
-			width: `${offsetWidth}px`,
-			height: `${offsetHeight}px`,
-			top: `${offsetTop}px`,
-			left: `${offsetLeft}px`,
+			width: child.width,
+			height: child.height,
+			top: child.top - parent.top,
+			left: child.left - parent.left,
 		};
 	};
 
@@ -55,18 +56,27 @@ const Transcript = ({ audioPlayerRef }) => {
 		// return confidence;
 	};
 
+	const onWordClick = (word) => {
+		audioPlayerRef.current.currentTime = word.start;
+	};
+
 	return (
-		<div style={{ position: "relative" }}>
-			<span ref={wordsRef}>
-				{data.segments.map((wordsArr) =>
-					wordsArr.words.map((words) => (
-						<span className={getConfidenceStyle(words.probability)}>
-							{words.word}
-						</span>
-					))
-				)}
-			</span>
-			<div className="highlight" style={{ ...highlightPos }}></div>
+		<div ref={wordsRef} style={{ position: "relative" }}>
+			{data.segments.map((wordsArr) =>
+				wordsArr.words.map((words) => (
+					<span
+						onClick={() => onWordClick(words)}
+						className={getConfidenceStyle(words.probability)}
+						style={{ padding: 0, margin: 0 }}
+					>
+						{words.word}
+					</span>
+				))
+			)}
+			<div
+				className="highlight"
+				style={{ ...highlightPos, position: "absolute" }}
+			></div>
 		</div>
 	);
 };

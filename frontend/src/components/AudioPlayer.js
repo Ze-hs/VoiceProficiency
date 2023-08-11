@@ -1,6 +1,5 @@
 import React, {
 	forwardRef,
-	useEffect,
 	useImperativeHandle,
 	useRef,
 	useState,
@@ -14,6 +13,7 @@ const AudioPlayer = forwardRef((props, ref) => {
 	const audioPlayer = useRef(null);
 
 	useImperativeHandle(ref, () => audioPlayer.current);
+
 	const handlePlayClick = () => {
 		setIsPlaying(!isPlaying);
 		isPlaying ? audioPlayer.current.pause() : audioPlayer.current.play();
