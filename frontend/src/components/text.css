@@ -8,6 +8,11 @@
 	position: absolute;
 	top:0;
 	left:0;
-	transition:  .1s ease .1s; /* only transition top property */
+	transition:  .1s ease; /* only transition top property */
 	opacity: 50%;
+}
+
+.audio-progress{
+	-webkit-appearance: none;
+	background-color: black;
 }

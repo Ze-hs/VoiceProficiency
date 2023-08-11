@@ -52,10 +52,6 @@ const Transcript = ({ audioPlayerRef }) => {
 		};
 	};
 
-	const getConfidenceStyle = (confidence) => {
-		// return confidence;
-	};
-
 	const onWordClick = (word) => {
 		audioPlayerRef.current.currentTime = word.start;
 	};
@@ -66,7 +62,6 @@ const Transcript = ({ audioPlayerRef }) => {
 				wordsArr.words.map((words) => (
 					<span
 						onClick={() => onWordClick(words)}
-						className={getConfidenceStyle(words.probability)}
 						style={{ padding: 0, margin: 0 }}
 					>
 						{words.word}

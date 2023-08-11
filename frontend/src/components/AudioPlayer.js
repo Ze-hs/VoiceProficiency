@@ -4,7 +4,10 @@ import React, {
 	useRef,
 	useState,
 } from "react";
-import sample from "../audio/Sample.mp3";
+import sample from "../../../backend/public/audio/sample.mp3";
+import utils from "../utils/helper";
+
+import "./text.css";
 
 const AudioPlayer = forwardRef((props, ref) => {
 	const [isPlaying, setIsPlaying] = useState(false);
@@ -28,6 +31,9 @@ const AudioPlayer = forwardRef((props, ref) => {
 		setCurrentTime(event.currentTarget.currentTime);
 	};
 
+	const onProgressBarChange = (event) => {
+		audioPlayer.current.currentTime = event.target.value;
+	};
 	return (
 		<>
 			<div>audioPlayer</div>
@@ -39,6 +45,7 @@ const AudioPlayer = forwardRef((props, ref) => {
 				//Wait for metadata before setting duration
 				preload="metadata"
 				onLoadedMetadata={onLoadedMetadata}
+				onEnded={handlePlayClick}
 			>
 				cannot play
 			</audio>
@@ -47,9 +54,17 @@ const AudioPlayer = forwardRef((props, ref) => {
 				<button onClick={handlePlayClick}>
 					{isPlaying ? "pause" : "play"}
 				</button>
-				<p>{currentTime}</p>
-				<input type="range"></input>
-				<p>{duration}</p>
+				<p>{utils.formatTime(currentTime)}</p>
+				<input
+					type="range"
+					className="audio-progress"
+					value={currentTime}
+					onInput={onProgressBarChange}
+					max={duration}
+					min={0}
+					style={{ width: "100%" }}
+				></input>
+				<p>{utils.formatTime(duration)}</p>
 			</div>
 		</>
 	);
