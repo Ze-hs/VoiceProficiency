@@ -12,4 +12,8 @@ const formatTranscript = (transcript) => {
 	}, []);
 };
 
-export default { formatTime, formatTranscript };
+const formatFileName = (filename) => {
+	return filename.replace(/\.[^/.]+$/, "");
+};
+
+export default { formatTime, formatTranscript, formatFileName };

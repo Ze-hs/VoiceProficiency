@@ -1,21 +1,47 @@
 import React, {
 	forwardRef,
+	useEffect,
 	useImperativeHandle,
 	useRef,
 	useState,
 } from "react";
-import sample from "../../../backend/public/audio/sample.mp3";
 import utils from "../utils/helper";
 
+import audioService from "../services/audio";
+
+//Possibly delete this
 import "./text.css";
 
-const AudioPlayer = forwardRef((props, ref) => {
+const AudioPlayer = forwardRef(({ audioName }, ref) => {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [duration, setDuration] = useState(0);
 	const [currentTime, setCurrentTime] = useState(0);
+	const [audioUrl, setAudioUrl] = useState(null);
 	const audioPlayer = useRef(null);
 
 	useImperativeHandle(ref, () => audioPlayer.current);
+
+	useEffect(() => {
+		if (audioName) {
+			audioService
+				.getAudio(audioName)
+				.then((data) => {
+					const blob = new Blob([data], { type: "audio/ogg" });
+					const url = URL.createObjectURL(blob);
+					setAudioUrl(url);
+				})
+				.catch((error) => {
+					console.log("error fetching url", error);
+				});
+		}
+
+		//Clean up the blob url when dismounting
+		return () => {
+			if (audioUrl) {
+				URL.revokeObjectURL(audioUrl);
+			}
+		};
+	}, [audioName]);
 
 	const handlePlayClick = () => {
 		setIsPlaying(!isPlaying);
@@ -34,14 +60,19 @@ const AudioPlayer = forwardRef((props, ref) => {
 	const onProgressBarChange = (event) => {
 		audioPlayer.current.currentTime = event.target.value;
 	};
+
+	if (!audioUrl) {
+		return <div>No audio found</div>;
+	}
+
 	return (
 		<>
 			<div>audioPlayer</div>
 			<audio
 				ref={audioPlayer}
 				onTimeUpdate={updateCurrentTime}
-				src={sample}
-				type="audio/mpeg"
+				src={audioUrl}
+				type="audio/ogg"
 				//Wait for metadata before setting duration
 				preload="metadata"
 				onLoadedMetadata={onLoadedMetadata}
@@ -54,14 +85,15 @@ const AudioPlayer = forwardRef((props, ref) => {
 				<button onClick={handlePlayClick}>
 					{isPlaying ? "pause" : "play"}
 				</button>
+
 				<p>{utils.formatTime(currentTime)}</p>
+
 				<input
 					type="range"
 					className="audio-progress"
 					value={currentTime}
 					onInput={onProgressBarChange}
 					max={duration}
-					min={0}
 					style={{ width: "100%" }}
 				></input>
 				<p>{utils.formatTime(duration)}</p>

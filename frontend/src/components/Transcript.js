@@ -1,19 +1,24 @@
 import React, { useEffect, useRef, useState } from "react";
-import transcriptData from "../audio/Sample.json";
 import utils from "../utils/helper";
-
+import transcriptService from "../services/transcript";
 //Testing purposes delete late
-import data from "../audio/Sample.json";
 
-const Transcript = ({ audioPlayerRef }) => {
+const Transcript = ({ audioPlayerRef, transcriptName }) => {
 	const [transcript, setTranscript] = useState([]);
 	const wordsRef = useRef(null);
 	const [highlightPos, setHighlightPos] = useState(null);
 
 	//change this once backend is finalized
 	useEffect(() => {
-		setTranscript(utils.formatTranscript(transcriptData.segments));
-	}, []);
+		if (transcriptName) {
+			transcriptService
+				.getTranscript(transcriptName)
+				.then((data) => {
+					setTranscript(utils.formatTranscript(data.segments));
+				})
+				.catch((error) => console.log(error));
+		}
+	}, [transcriptName]);
 
 	useEffect(() => {
 		const playerCur = audioPlayerRef.current;
@@ -38,9 +43,11 @@ const Transcript = ({ audioPlayerRef }) => {
 			playerCur.addEventListener("timeupdate", ontimeupdate);
 		}
 
-		return () => {
-			playerCur.removeEventListener("timeupdate", ontimeupdate);
-		};
+		if (playerCur) {
+			return () => {
+				playerCur.removeEventListener("timeupdate", ontimeupdate);
+			};
+		}
 	}, [audioPlayerRef, transcript]);
 
 	const getWordProperty = (parent, child) => {
@@ -56,18 +63,22 @@ const Transcript = ({ audioPlayerRef }) => {
 		audioPlayerRef.current.currentTime = word.start;
 	};
 
+	if (!Array.isArray(transcript) || !transcript.length) {
+		console.log(transcript);
+		return <div>transcript not loaded in yet</div>;
+	}
+
 	return (
 		<div ref={wordsRef} style={{ position: "relative" }}>
-			{data.segments.map((wordsArr) =>
-				wordsArr.words.map((words) => (
-					<span
-						onClick={() => onWordClick(words)}
-						style={{ padding: 0, margin: 0 }}
-					>
-						{words.word}
-					</span>
-				))
-			)}
+			{transcript.map((words) => (
+				<span
+					key={`${words.word}-${words.start}`}
+					onClick={() => onWordClick(words)}
+					style={{ padding: 0, margin: 0 }}
+				>
+					{words.word}
+				</span>
+			))}
 			<div
 				className="highlight"
 				style={{ ...highlightPos, position: "absolute" }}
