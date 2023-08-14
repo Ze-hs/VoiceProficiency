@@ -3,19 +3,19 @@ const fs = require("fs");
 const path = require("path");
 const multer = require("multer");
 
+//To run command line from node
+const { exec } = require("child_process");
+
 //Setting properties for saving to local machine
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
-		console.log("dest: ", file);
 		cb(null, "./public/audio/");
 	},
-	onFileUploadStart: function (file) {
-		console.log(file.fieldname + " is starting ...");
-	},
+
 	filename: (req, file, cb) => {
 		const extension = path.extname(file.originalname);
 		const basename = path.basename(file.originalname, extension);
-
+		req.newName = `${basename}-${Date.now()}${extension}`;
 		cb(null, `${basename}-${Date.now()}${extension}`);
 	},
 });
@@ -42,9 +42,27 @@ soundRouter.get("/:id", async (req, res) => {
 });
 
 soundRouter.post("/", upload.single("audio"), async (req, res) => {
+	//move to middleware
 	if (!req.file) {
 		return res.status(400).json({ error: "No audio file uploaded" });
 	}
+	// console.log(
+	// 	// `cd public/audio; whisper ${req.file.originalname}  -o "../transcripts" --language English --output_format json --task transcribe --fp16 False --word_timestamps True`
+	// 	req.newName
+	// );
+
+	const child = exec(
+		// "cd public/audio; ls",
+		`cd public/audio; whisper ${req.newName}  -o "../transcripts" --language English --output_format json --task transcribe --fp16 False --word_timestamps True`,
+		(error, stdout, stderr) => {
+			if (error) {
+				console.error(`exec error: ${error}`);
+				return;
+			}
+			console.log(`stdout: ${stdout}`);
+			// console.log(`stderr: ${stderr}`);
+		}
+	);
 
 	res.json({ message: "Sound uploaded successfully" });
 });

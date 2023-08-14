@@ -16,7 +16,6 @@ const getAudio = async (id) => {
 
 const createAudio = async (files) => {
 	const fd = new FormData();
-	console.log(files);
 	fd.append("audio", files[0], files[0].name);
 
 	await axios.post(baseUrl, fd, {
