@@ -46,10 +46,6 @@ soundRouter.post("/", upload.single("audio"), async (req, res) => {
 	if (!req.file) {
 		return res.status(400).json({ error: "No audio file uploaded" });
 	}
-	// console.log(
-	// 	// `cd public/audio; whisper ${req.file.originalname}  -o "../transcripts" --language English --output_format json --task transcribe --fp16 False --word_timestamps True`
-	// 	req.newName
-	// );
 
 	const child = exec(
 		// "cd public/audio; ls",

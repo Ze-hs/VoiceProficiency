@@ -1,28 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
-import utils from "../utils/helper";
-import transcriptService from "../services/transcript";
-//Testing purposes delete late
+import { useSelector } from "react-redux";
 
-const Transcript = ({ audioPlayerRef, transcriptName }) => {
-	const [transcript, setTranscript] = useState([]);
+//Material UI Imports
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+
+const Transcript = ({ audioPlayerRef }) => {
+	const transcript = useSelector((state) => state.transcriptList.transcript);
+	const audioName = useSelector((state) => state.audioList.current);
+	const transcriptName = useSelector(
+		(state) => state.transcriptList.currentName
+	);
 	const wordsRef = useRef(null);
+
 	const [highlightPos, setHighlightPos] = useState(null);
+	const [showConfidence, setShowConfidence] = useState(false);
 
-	//change this once backend is finalized
-	useEffect(() => {
-		if (transcriptName) {
-			transcriptService
-				.getTranscript(transcriptName)
-				.then((data) => {
-					setTranscript(utils.formatTranscript(data.segments));
-				})
-				.catch((error) => console.log(error));
-		}
-	}, [transcriptName]);
-
+	//Highlight current words in the transcript
 	useEffect(() => {
 		const playerCur = audioPlayerRef.current;
-
+		//Find the current active word and set the css property
 		const ontimeupdate = () => {
 			const activeWordIndex = transcript.findIndex((word) => {
 				return word.start >= audioPlayerRef.current.currentTime;
@@ -43,12 +41,13 @@ const Transcript = ({ audioPlayerRef, transcriptName }) => {
 			playerCur.addEventListener("timeupdate", ontimeupdate);
 		}
 
+		//Clean up function for timeupdate
 		if (playerCur) {
 			return () => {
 				playerCur.removeEventListener("timeupdate", ontimeupdate);
 			};
 		}
-	}, [audioPlayerRef, transcript]);
+	}, [audioPlayerRef, transcript, transcriptName]);
 
 	const getWordProperty = (parent, child) => {
 		return {
@@ -63,27 +62,70 @@ const Transcript = ({ audioPlayerRef, transcriptName }) => {
 		audioPlayerRef.current.currentTime = word.start;
 	};
 
+	const onConfidenceBtnClick = () => {
+		setShowConfidence(!showConfidence);
+	};
+
 	if (!Array.isArray(transcript) || !transcript.length) {
-		console.log(transcript);
-		return <div>transcript not loaded in yet</div>;
+		return <Typography>No transcript found</Typography>;
+	} else if (audioName && !transcriptName) {
+		return <Typography>Transcript not processed yet</Typography>;
 	}
 
 	return (
-		<div ref={wordsRef} style={{ position: "relative" }}>
-			{transcript.map((words) => (
-				<span
-					key={`${words.word}-${words.start}`}
-					onClick={() => onWordClick(words)}
-					style={{ padding: 0, margin: 0 }}
-				>
-					{words.word}
-				</span>
-			))}
-			<div
-				className="highlight"
-				style={{ ...highlightPos, position: "absolute" }}
-			></div>
-		</div>
+		<Box
+			sx={{
+				marginBlock: "1.25%",
+			}}
+		>
+			<Button
+				sx={{ fontSize: ".85em" }}
+				variant="outlined"
+				onClick={onConfidenceBtnClick}
+			>
+				Show Confidence
+			</Button>
+			<Box
+				sx={{
+					position: "relative",
+					marginTop: "1.25%",
+
+					wordSpacing: ".25em",
+				}}
+				ref={wordsRef}
+			>
+				{transcript.map((words) => (
+					<Typography
+						key={`${words.word}-${words.start}`}
+						onClick={() => onWordClick(words)}
+						sx={{
+							display: "inline",
+							position: "relative",
+							padding: 0,
+							margin: 0,
+							fontSize: "1.05em",
+							zIndex: 2,
+							backgroundColor:
+								showConfidence && words.probability < 0.25
+									? "error.light"
+									: null,
+						}}
+					>
+						{words.word}
+					</Typography>
+				))}
+
+				<Box
+					sx={{
+						...highlightPos,
+						position: "absolute",
+						opacity: "35%",
+						backgroundColor: "primary.main",
+						zIndex: 1,
+					}}
+				></Box>
+			</Box>
+		</Box>
 	);
 };
 
