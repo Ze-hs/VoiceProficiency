@@ -18,11 +18,13 @@ const createAudio = async (files) => {
 	const fd = new FormData();
 	fd.append("audio", files[0], files[0].name);
 
-	await axios.post(baseUrl, fd, {
+	const request = await axios.post(baseUrl, fd, {
 		headers: {
 			"Content-Type": "multipart/form-data",
 		},
 	});
+
+	return request;
 };
 
 export default { getAll, getAudio, createAudio };

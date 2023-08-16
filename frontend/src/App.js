@@ -1,36 +1,40 @@
-import React, { useEffect, useRef, useState } from "react";
-import audioService from "./services/audio";
+import React, { useEffect, useRef } from "react";
 import AudioList from "./components/AudioList";
 import AudioPlayer from "./components/AudioPlayer";
 import Transcript from "./components/Transcript";
-import util from "./utils/helper";
 import DropZone from "./components/DropZone";
+import { getAudioList } from "./reducers/audioReducer";
+import { useDispatch } from "react-redux";
+import { getTranscriptList } from "./reducers/transcriptReducer";
+
+//MaterialUI imports
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Stack from "@mui/material/Stack";
 
 const App = () => {
-	const [audioList, setAudioList] = useState([]);
-	const [audioName, setAudioName] = useState(null);
 	const audioPlayerRef = useRef(null);
-
-	const getTranscriptName = () => {
-		return audioName ? `${util.formatFileName(audioName)}.json` : null;
-	};
+	const dispatch = useDispatch();
 
 	useEffect(() => {
-		audioService.getAll().then((data) => {
-			setAudioList(data);
-		});
-	}, []);
+		dispatch(getAudioList());
+		dispatch(getTranscriptList());
+	}, [dispatch]);
 
 	return (
-		<div>
-			<AudioPlayer ref={audioPlayerRef} audioName={audioName} />
-			<Transcript
-				audioPlayerRef={audioPlayerRef}
-				transcriptName={getTranscriptName()}
-			/>
-			<AudioList audioList={audioList} setAudio={setAudioName} />
-			<DropZone />
-		</div>
+		<Stack direction="row">
+			<AudioList />
+
+			<Box sx={{ width: "100%" }} margin={1}>
+				<AudioPlayer ref={audioPlayerRef} />
+
+				<Divider />
+				<Transcript audioPlayerRef={audioPlayerRef} />
+
+				<Divider />
+				<DropZone />
+			</Box>
+		</Stack>
 	);
 };
 
