@@ -1,3 +1,5 @@
+#Voice Proficiency
+
 This is a web application for users looking to improve their speech. It allows them to upload audio files, automatically transcribing them and highlighting words which do not meet the threshold.
 
 ![image](./demo/demo.gif)
