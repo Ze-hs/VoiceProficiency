@@ -17,6 +17,6 @@ $ npm start
 
 -   [Express.js](https://expressjs.com/) - Executes backend logic via REST API
 -   [React](https://reactjs.org/) - Used for the frontend
--   [Node.js](https://nodejs.org/) - The runtime in which Clique runs on
+-   [Node.js](https://nodejs.org/) - The runtime environment used
 -   [Material UI](https://mui.com/material-ui/) - React library used for the frontend styling
 -   [whisper](https://github.com/openai/whisper) - AI tool to transcribe the audio
